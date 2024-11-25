@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The inner workings of computer screens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .slide.active {
+            left: 0;
+            opacity: 1;
+        }
+        .slide.exit-left {
+            left: -100%;
+            opacity: 0;
+        }
+        .slide.exit-right {
+            left: 100%;
+            opacity: 0;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1>Intro to screens</h1>
+        <p>Computer screens have been around for a very long time in the form of what used to be their foundational technology, cathode ray tubes.
+        These have been around since 1897, but the first time can I find evidence of them being used for computer display output is from 1952, 
+        when cambridge Computer Science professor Alexander S. Douglas programmed their electronic delay storage automatic calculator to play noughts and crosses, 
+        earning him the title of first videogame developer ever. </p>
+        <p>
+        It seems that since their inception, people have been playing videogames on school computers.
+        </p>
+        <p>
+        The "screen" he was using to display the game a cathode ray tube with a 35X15 pixel resolution. An image of it can be seen below.
+        </p>
+        <img src="https://images.computerhistory.org/timeline/timeline_graphics.games_1952.oxo.jpg" width="350px" height="350px" loading="eager" decoding="sync">
+    </div>
+    <div class="slide">
+        <h1>CRT Screens</h1>
+        <p>Serious Cathode ray tube screens have been a thing since 1934 when German company Telefunken 
+        created the first commercially available CRT television.</p>
+        <p>Two-colour cathode ray tubes work, to simplify, by firing electrons at a phosphor-coated screen, which emits light when struck by the electrons.</p>
+        <p>A diagram is included below:</p>
+        <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2021/04/CRT_diagram_htg_1.jpg?q=50&fit=crop&w=825&dpr=1.5" width="350px" height="250px">
+        <p>In the event that we multiple colours are needed, we use multiple electron guns and a coating with dots that are spaced out in a way that the human eye can't distinguish them.</p>
+        <p>A diagram of this is included below</p>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220823092653/ColourCRTdisplay.jpg" width="350px" height="250px" loading="eager" decoding="sync">
+    </div>
+    <div class="slide">
+        <h1>LCD Screens</h1>
+        <p>With time, these screens got replaced with newer LCD technology. While liquid crystals were first discovered 9 years before 
+        the disocvery of the cathode ray tube in 1888, it wasn't until 1968 that the first "LCD screen" was created by George H. Heilmeier. 
+        It was only really a single changeable pixel, but it was the first qualifying screen.</p>
+        <p>It took until 1992 for the first commmercial LCD screens to be sold by Sharp Corporation, but widespread adoption took until the turn of the millennium</p>
+        <p>A diagram of how this works is down below:</p>
+        <img src="https://tailorpixels.com/wp-content/uploads/2022/08/The-structure-of-LCD.jpg" width="700px" height="500px" loading="eager" decoding="sync">
+    </div>
+    <div class="slide">
+        <h1>LED Screens</h1>
+        <p>As LED technology became progressively cheaper, 
+        Screens comprised of clusters of individually controllable LEDs were produced to combat the problem presented by the backlight of LCD screens being able to be outshone by the sun in outdoor areas, 
+        making the screen invisible.</p>
+        <p>These screens are still in use today, and are the most common type of screen used in electronic billboards.</p>
+        <p>Yes, there is literally a whole screen technology dedicated to ruining cityscapes with ads.</p>
+        <p>A diagram of how this works is below:(</p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhackster.imgix.net%2Fuploads%2Fattachments%2F1214205%2F788bs_8x8_led_dot_matrix(1)_sjOU7T8mkS.png&f=1&nofb=1&ipt=f7da694817f4e05cf3b58200afdd04d24f80aabdfa350ce84bde46aa865017c7&ipo=images" width="900px" height="500px" loading="eager" decoding="sync">
+    </div>
+    <div class="slide">
+        <h1>microLED Screens</h1>
+        <p>There are esssentially the same thing as LED screens but shrunk down so much that they look like LCD screens. The advantage is that the lack of a backlight allows parts of the screen to be entirely turned off, meaning that a true black colour is now possible.</p>
+        <p>They have become increasingly popular in mobile devices, as the only other way of achieving this is through OLED technology, which requires heating up a carbon film, and so it's hard to avoid overheating with OLED screens in dense and often ambiently cooled mobile devices.</p>
+    </div>
+    <div class="slide">
+        <h1>OLED Screens</h1>
+        <p>OLED screens work by passing an electric current through a carbon-based film so that it heats up and emits light. Colour OLED screens have three of these films in red green and blue which turn on and off as needed to make any needed colour.</p>
+        <p>A diagram is below:</p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FRitu_Srivastava2%2Fpublication%2F221909245%2Ffigure%2Ffig3%2FAS%3A305355260219396%401449813775581%2FSchematic-diagram-of-multilayer-white-OLED.png&f=1&nofb=1&ipt=e34c7832d839c3ace72dbfb7fae69f35715a25ee50dc71f440572234e4bbc111&ipo=images" width="800px" height="500px" loading="eager" decoding="sync">
+    </div>
+    <div class="controls">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'exit-left', 'exit-right');
+                if (i === index) {
+                    slide.classList.add('active');
+                } else if (i < index) {
+                    slide.classList.add('exit-left');
+                } else {
+                    slide.classList.add('exit-right');
+                }
+            });
+            currentSlide = index;
+            history.replaceState(null, '', '#' + currentSlide);
+        }
+
+        function prevSlide() {
+            const index = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(index);
+        }
+
+        function nextSlide() {
+            const index = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(index);
+        }
+
+        function init() {
+            const hash = window.location.hash.substring(1);
+            const index = parseInt(hash);
+            if (!isNaN(index) && index >= 0 && index < slides.length) {
+                currentSlide = index;
+            }
+            showSlide(currentSlide);
+        }
+
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>
